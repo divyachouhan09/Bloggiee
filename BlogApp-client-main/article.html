@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CKEditor Script -->
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="homePage.html" class="btn">Home</a></li>
+            <li><a href="dashboard.html" class="btn">Dashboard</a></li>
+            <li><a href="index.html" id="logoutBtn" class="btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i> <!-- Font Awesome menu icon -->
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <h1 id="post-title">Loading...</h1>
+    <h2 id="post-subtitle"></h2>
+    <div class="image-container">
+        <img id="post-image" src="" alt="Article Image">
+    </div>
+    <p class="meta-info">By <span id="post-author">Author</span> on <span id="post-date">Date</span></p>
+    <div class="content" id="post-body"></div>
+    <div class="button-container">
+        <button id="editBtn">Edit Article</button>
+        <button id="deleteBtn">Delete Article</button>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Article</h2>
+            <form class="edit-form" id="editForm">
+                <!-- <label for="edit-title">Title</label> -->
+                <input placeholder="Title" type="text" id="edit-title" name="title" required>
+
+                <input placeholder="SubTitle" type="text" id="edit-subtitle" name="subtitle">
+
+                <textarea placeholder="Body" id="edit-body" name="body" rows="6" required></textarea>
+
+                <input placeholder="Image Link" type="text" id="edit-imageLink" name="imageLink">
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comments-section">
+        <h3>Comments</h3>
+        <div id="comments-list"></div>
+        <form class="add-comment-form" id="addCommentForm">
+            <label for="comment-body">Comment</label>
+            <textarea id="comment-body" name="body" rows="4" required></textarea>
+
+            <button type="submit">Add Comment</button>
+        </form>
+    </div>
+
+    <script src="javascript/article.js"></script>
+    <script>
+        // Initialize CKEditor for the edit-body textarea
+        CKEDITOR.replace('edit-body');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 30px 0;
+    font-family: 'Georgia', serif;
+    background-color: #fbf2d5; /* Use third-color for background */
+    color: #394a51; /* Use first-color for text */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    background-color: #7fa99b; /* Use second-color for container background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0.7, 0, 1);
+}
+h1 {
+    color: #394a51; /* Use first-color for headings */
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #394a51; /* Use first-color for labels */
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #fdc57b; /* Use fourth-color for borders */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #394a51; /* Use first-color for text */
+    background-color: #fbf2d5; /* Use third-color for input background */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #7fa99b; /* Use second-color for focus border */
+    outline: none;
+}
+
+/* Buttons */
+.glow-button {
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    color: #394a51; /* Use first-color for text */
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.glow-button:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+/* Links */
+.login-link {
+    text-align: center;
+}
+
+.login-link a {
+    color: #394a51; /* Use second-color for links */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 10px;
+    }
+
+    .glow-button {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding: 8px;
+    }
+
+    .glow-button {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+}

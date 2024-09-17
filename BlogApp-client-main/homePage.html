@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="btn">User Dashboard</a></li>
+            <li><a href="#" id="logoutBtn" class="btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i> <!-- Font Awesome menu icon -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Blog Posts</h1>
+        <hr class="divider">
+    </section>
+
+    <!-- Featured Post Section -->
+     <section class ="posts">
+    <section class="featured-post-container" id="featuredPostContainer">
+        <!-- Featured post will be dynamically generated here -->
+    </section>
+
+    <!-- Posts Section -->
+    <section class="posts-container" id="postsContainer">
+        <!-- Posts will be dynamically generated here -->
+    </section>
+</section>
+
+    <script src="javascript/home.js"></script>
+</body>
+</html>

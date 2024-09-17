@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    font-family: 'Georgia', serif;
+    background-color: #fbf2d5; /* Use third-color for background */
+    color: #394a51; /* Use first-color for text */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #7fa99b; /* Use second-color for container background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0.7, 0, 1);
+}
+
+.form-container {
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+h1 {
+    color: #394a51; /* Use first-color for headings */
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #394a51; /* Use first-color for labels */
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #fdc57b; /* Use fourth-color for borders */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #394a51; /* Use first-color for text */
+    background-color: #fbf2d5; /* Use third-color for input background */
+}
+
+.input-group input:focus {
+    border-color: #7fa99b; /* Use second-color for focus border */
+    outline: none;
+}
+
+.error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Buttons */
+.glow-on-hover {
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    color: #394a51; /* Use first-color for text */
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.glow-on-hover:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+/* Links */
+p {
+    text-align: center;
+}
+
+p a {
+    color: #394a51; /* Use second-color for links */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input {
+        padding: 10px;
+    }
+
+    .glow-on-hover {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .input-group input {
+        padding: 8px;
+    }
+
+    .glow-on-hover {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,297 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: #394a51; /* Use second-color for navbar */
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-link, .nav-button {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #394a51; /* first-color */
+    background-color: #fdc57b; /* fourth-color */
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-link:hover, .nav-button:hover {
+    background-color: #394a51; /* first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+.logout-button {
+    margin-right: 0;
+}
+
+.logo img {
+    height: 143px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .nav-link {
+    margin-left: 20px;
+}
+
+.navbar-right .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #394a51; /* Use first-color for text */
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-right .nav-link:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+.big-section {
+    background-color: #7fa99b;
+    min-height: 100vh;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fbf2d5; /* third-color */
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #394a51; /* first-color */
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 26px;
+}
+
+/* Post Card */
+.post-card {
+    border: 1px solid #7fa99b; /* second-color */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+}
+
+.post-card h3 {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 1.25em;
+    color: #394a51; /* first-color */
+    cursor: pointer;
+}
+
+.post-card p {
+    padding: 0 15px 10px;
+    color: #666;
+}
+
+.read-more {
+    display: block;
+    padding: 10px 15px;
+    background-color: #394a51; /* first-color */
+    color: #fbf2d5; /* third-color */
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fbf2d5; /* third-color */
+    margin: 85px auto;
+    padding: 15px 40px;
+    border: 1px solid #7fa99b; /* second-color */
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    color: #394a51; /* first-color */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #394a51; /* first-color */
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #7fa99b; /* second-color */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #394a51; /* first-color */
+}
+
+.modal-content button {
+    background-color: #394a51; /* first-color */
+    color: #fbf2d5; /* third-color */
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #7fa99b; /* second-color */
+    color: #394a51; /* first-color */
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    color: #394a51; /* first-color */
+    margin-top: 10px;
+}
+
+/* Blur Effect */
+.blur {
+    filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 5px 20px;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right .nav-link, .navbar-right .nav-button {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-right .nav-link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .modal-content {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-right .nav-link, .navbar-right .nav-button {
+        margin-bottom: 10px;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .content {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .post-card h3 {
+        font-size: 1em;
+    }
+}

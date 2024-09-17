@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fbf2d5; /* Use third-color for background */
+    color: #394a51; /* Use first-color for text */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: #7fa99b; /* Use second-color for navbar */
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 143px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #394a51; /* Use first-color for text */
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #394a51; /* Use first-color for hero background */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 50%;
+    z-index: 1;
+    color: #fbf2d5; /* Use third-color for text */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1s 0.5s forwards;
+}
+
+.start-reading-btn {
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    color: #394a51; /* Use first-color for text */
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.start-reading-btn:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+
+.hero-image {
+    position: relative;
+    z-index: 0;
+    margin-left: 20px; /* Add margin to avoid overlap */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 20px;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeInZoom 1.5s forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 34px;
+
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .start-reading-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .hero-image {
+        margin-left: 0;
+    }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        margin-right: 34px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .start-reading-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fbf2d5; /* Use third-color for background */
+    color: #394a51; /* Use first-color for text */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: #7fa99b; /* Use second-color for navbar */
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 143px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #394a51; /* Use first-color for text */
+    background-color: #fdc57b; /* Use fourth-color for button background */
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #394a51; /* Use first-color for hover background */
+    color: #fff; /* White text on hover */
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fbf2d5; /* Use third-color for icon */
+}
+
+.hamburger i {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.navbar.responsive .hamburger i {
+    color: #394a51; /* Use first-color for icon in responsive mode */
+    opacity: 0.8;
+}
+
+.navbar.responsive .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #7fa99b; /* Use second-color for dropdown background */
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar.responsive .nav-links.active {
+    display: flex;
+}
+
+.navbar.responsive .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #7fa99b; /* Use first-color for hero background */
+    margin-bottom: 20px;
+    /* border: 1px solid #394a51; Use first-color for border */
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fbf2d5; /* Use third-color for hero text */
+}
+
+.hero .divider {
+    width: 100px;
+    height: 3px;
+    margin: 20px auto;
+    background-color: #fdc57b; /* Use fourth-color for divider */
+    border: none;
+}
+
+.posts{
+    padding: 0 40px 0 40px;
+}
+/* Featured Post Section */
+.featured-post-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #7fa99b; /* Use second-color for background */
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-post-card {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.featured-post-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.featured-content-wrapper {
+    flex: 1;
+    padding: 20px;
+}
+
+.featured-content-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fbf2d5; /* Use third-color for heading text */
+    cursor: pointer;
+}
+
+.featured-content-wrapper p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #f2f2f2; /* Use a lighter color for paragraph text */
+}
+
+.featured-content-wrapper .read-more {
+    font-weight: bold;
+    color: #fdc57b; /* Use fourth-color for read more links */
+}
+
+.author-name {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+/* Posts Section */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.post-card h3{
+    color: #fbf2d5; /* Use third-color for post titles */
+    cursor: pointer;
+}
+.post-card {
+    background-color: #7fa99b; /* Use second-color for post card background */
+    padding: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fbf2d5; /* Use third-color for post titles */
+    cursor: pointer;
+}
+
+.post-subtitle, .post-body {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #f2f2f2; /* Use a lighter color for post subtitle and body text */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 100px;
+        align-self: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .featured-post-card {
+        flex-direction: column;
+    }
+
+    .featured-post-image {
+        width: 100%;
+    }
+
+    .featured-content-wrapper p {
+        font-size: 20px;
+    }
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* .post-card {
+        padding: 15px;
+    } */
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    .posts{
+        padding: 0;
+    }
+    .logo img {
+        height: 80px;
+        align-self: center;
+
+    }
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+    body {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .featured-content-wrapper h2 {
+        font-size: 20px;
+    }
+    .featured-content-wrapper p {
+        font-size: 14px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Reflectory - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="input-group">
+                <label for="bio">Bio (Optional)</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </div>
+            <button type="submit" class="glow-button">Register</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="/login.html">Login here</a></p>
+    </div>
+    <script src="javascript/register.js"></script>
+</body>
+</html>
